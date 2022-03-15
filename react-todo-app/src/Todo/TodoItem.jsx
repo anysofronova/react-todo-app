@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import Context from "../context";
 
 const TodoItem = ({ todo, idx, onChange }) => {
+  const { deleteItem } = useContext(Context);
   const classes = [];
   if (todo.completed) {
     classes.push("done");
@@ -18,7 +20,7 @@ const TodoItem = ({ todo, idx, onChange }) => {
         &nbsp;
         {todo.title}
       </span>
-      <button>&times;</button>
+      <button onClick={() => deleteItem(todo.id)}>&times;</button>
     </li>
   );
 };
