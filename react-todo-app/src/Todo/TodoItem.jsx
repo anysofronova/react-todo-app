@@ -1,11 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const TodoItem = ({ todo, idx }) => {
+const TodoItem = ({ todo, idx, onChange }) => {
+  const classes = [];
+  if (todo.completed) {
+    classes.push("done");
+  }
   return (
     <li>
-      <span>
-        <input type="checkbox" onChange={() => console.log(todo.id)} />
+      <span className={classes.join(" ")}>
+        <input
+          type="checkbox"
+          checked={todo.completed}
+          onChange={() => onChange(todo.id)}
+        />
         <strong>{idx + 1}</strong>
         &nbsp;
         {todo.title}
@@ -17,5 +25,6 @@ const TodoItem = ({ todo, idx }) => {
 TodoItem.propTypes = {
   todo: PropTypes.object.isRequired,
   idx: PropTypes.number,
+  onChange: PropTypes.func.isRequired,
 };
 export default TodoItem;

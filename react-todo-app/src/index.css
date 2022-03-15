@@ -42,3 +42,7 @@ button {
   background-color: #fff;
   font-size: 20px;
 }
+
+.done {
+  text-decoration: line-through;
+}
