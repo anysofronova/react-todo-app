@@ -23,3 +23,26 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.3rem;
+  border: 1px solid #404040;
+}
+
+input {
+  margin-right: 1rem;
+}
+
+button {
+  border: none;
+  background-color: #fff;
+  font-size: 20px;
+}
+
+.done {
+  text-decoration: line-through;
+}
