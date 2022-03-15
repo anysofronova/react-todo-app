@@ -4,9 +4,13 @@ import PropTypes from "prop-types";
 const TodoItem = ({ todo, idx }) => {
   return (
     <li>
-      <strong>{idx + 1}</strong>
-      &nbsp;
-      {todo.title}
+      <span>
+        <input type="checkbox" onChange={() => console.log(todo.id)} />
+        <strong>{idx + 1}</strong>
+        &nbsp;
+        {todo.title}
+      </span>
+      <button>&times;</button>
     </li>
   );
 };
