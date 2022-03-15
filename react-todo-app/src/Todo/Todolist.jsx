@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { TodoItem } from "./TodoItem";
+import TodoItem from "./TodoItem";
 
 function Todolist(props) {
   return (
@@ -11,8 +11,8 @@ function Todolist(props) {
     </ul>
   );
 }
-Todolist.PropTypes = {
-  todos: PropTypes.array,
+Todolist.propTypes = {
+  todos: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Todolist;
