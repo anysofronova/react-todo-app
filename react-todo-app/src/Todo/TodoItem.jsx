@@ -20,7 +20,9 @@ const TodoItem = ({ todo, idx, onChange }) => {
         &nbsp;
         {todo.title}
       </span>
-      <button onClick={() => deleteItem(todo.id)}>&times;</button>
+      <button className="close_button" onClick={() => deleteItem(todo.id)}>
+        &times;
+      </button>
     </li>
   );
 };
