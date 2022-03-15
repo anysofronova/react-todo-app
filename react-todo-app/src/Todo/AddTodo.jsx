@@ -26,7 +26,7 @@ function AddTodo({ onCreate }) {
   return (
     <form className="wrapper__form" onSubmit={submitHandler}>
       <input {...input.bind} />
-      <button>Add a task</button>
+      <button className="add_button">Add a task</button>
     </form>
   );
 }
